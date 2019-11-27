@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollegeManagement.Domain", "CollegeManagement.Domain\CollegeManagement.Domain.csproj", "{D4571E61-83AF-4741-89B9-A8AC2C160F57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeManagement.Domain.Tests", "CollegeManagement.Domain.Tests\CollegeManagement.Domain.Tests.csproj", "{857A0485-5D83-4264-92BA-D9069F1FC292}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4571E61-83AF-4741-89B9-A8AC2C160F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4571E61-83AF-4741-89B9-A8AC2C160F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4571E61-83AF-4741-89B9-A8AC2C160F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4571E61-83AF-4741-89B9-A8AC2C160F57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{857A0485-5D83-4264-92BA-D9069F1FC292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{857A0485-5D83-4264-92BA-D9069F1FC292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{857A0485-5D83-4264-92BA-D9069F1FC292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{857A0485-5D83-4264-92BA-D9069F1FC292}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA4701A0-4682-435E-A3A9-4C835BC1E704}
+	EndGlobalSection
+EndGlobal
