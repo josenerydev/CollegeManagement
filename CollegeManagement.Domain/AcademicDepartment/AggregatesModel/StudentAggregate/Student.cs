@@ -8,8 +8,11 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.StudentAgg
 {
     public class Student : AggregateRoot
     {
-        public virtual Name Name { get; protected set; }
-        public virtual Email Email { get; protected set; }
+        private readonly string _name;
+        public virtual Name Name => (Name)_name;
+
+        private readonly string _email;
+        public virtual Email Email => (Email)_email;
 
         protected Student()
         {
@@ -18,8 +21,8 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.StudentAgg
         public Student(Name name, Email email)
             : this()
         {
-            Name = name;
-            Email = email;
+            _name = name;
+            _email = email;
         }
     }
 }

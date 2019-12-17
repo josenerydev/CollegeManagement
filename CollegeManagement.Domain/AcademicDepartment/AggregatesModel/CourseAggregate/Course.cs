@@ -8,16 +8,20 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.CourseAggr
 {
     public class Course : AggregateRoot
     {
-        public virtual Name Name { get; protected set; }
-        public virtual Credits Credits { get; protected set; }
+        private readonly string _name;
+        public virtual Name Name => (Name)_name;
+
+        private readonly int _credits;
+        public virtual Credits Credits => (Credits)_credits;
+
         protected Course()
         {
         }
 
         public Course(Name name, Credits credits)
         {
-            Name = name;
-            Credits = credits;
+            _name = name;
+            _credits = credits;
         }
     }
 }
