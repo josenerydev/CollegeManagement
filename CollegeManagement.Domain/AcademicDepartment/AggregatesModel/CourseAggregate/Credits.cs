@@ -1,5 +1,5 @@
 ﻿using CSharpFunctionalExtensions;
-using System;
+
 using System.Collections.Generic;
 
 namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.CourseAggregate

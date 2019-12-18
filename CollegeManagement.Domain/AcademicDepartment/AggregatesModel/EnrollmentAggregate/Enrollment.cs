@@ -2,9 +2,6 @@
 using CollegeManagement.Domain.AcademicDepartment.AggregatesModel.CourseAggregate;
 using CollegeManagement.Domain.AcademicDepartment.AggregatesModel.StudentAggregate;
 using CollegeManagement.Domain.SeedWork;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.EnrollmentAggregate
 {
@@ -26,7 +23,7 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.Enrollment
             Grade = grade;
         }
 
-        public virtual void Update(Course course,Grade grade)
+        public virtual void Update(Course course, Grade grade)
         {
             Course = course;
             Grade = grade;
