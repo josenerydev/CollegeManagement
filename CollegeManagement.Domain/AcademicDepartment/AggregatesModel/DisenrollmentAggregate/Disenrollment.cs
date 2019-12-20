@@ -11,7 +11,9 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.Disenrollm
         public virtual Student Student { get; protected set; }
         public virtual Course Course { get; protected set; }
         public virtual DateTime DateTime { get; protected set; }
-        public virtual Comment Comment { get; protected set; }
+
+        private readonly string _comment;
+        public virtual Comment Comment => (Comment)_comment;
 
         protected Disenrollment()
         {
@@ -22,7 +24,7 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.Disenrollm
         {
             Student = student;
             Course = course;
-            Comment = comment;
+            _comment = comment;
             DateTime = DateTime.UtcNow;
         }
     }

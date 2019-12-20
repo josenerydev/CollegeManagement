@@ -1,4 +1,5 @@
 ﻿using CollegeManagement.Domain.SeedWork;
+using CSharpFunctionalExtensions;
 
 namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.Common
 {
@@ -10,7 +11,7 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.Common
         public static readonly Grade D = new Grade(0, "D");
         public static readonly Grade F = new Grade(0, "F");
 
-        public virtual string Name { get; }
+        public virtual string Name { get; protected set; }
 
         protected Grade()
         {
@@ -21,6 +22,29 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.Common
         {
             Id = id;
             Name = name;
+        }
+
+        public static Result<Grade> Get(Maybe<string> name)
+        {
+            if (name.HasNoValue)
+                return Result.Failure<Grade>("Grade name is not specified");
+
+            if (name.Value == A.Name)
+                return Result.Ok(A);
+
+            if (name.Value == B.Name)
+                return Result.Ok(B);
+
+            if (name.Value == C.Name)
+                return Result.Ok(C);
+
+            if (name.Value == D.Name)
+                return Result.Ok(D);
+
+            if (name.Value == F.Name)
+                return Result.Ok(F);
+
+            return Result.Failure<Grade>($"Grade name is invalid: {name}");
         }
     }
 }

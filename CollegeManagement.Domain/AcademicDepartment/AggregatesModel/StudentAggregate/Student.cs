@@ -43,7 +43,7 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.StudentAgg
             return null;
         }
 
-        public virtual void RemoveEnrollment(Enrollment enrollment, string comment)
+        public virtual void RemoveEnrollment(Enrollment enrollment, Comment comment)
         {
             _enrollments.Remove(enrollment);
 
