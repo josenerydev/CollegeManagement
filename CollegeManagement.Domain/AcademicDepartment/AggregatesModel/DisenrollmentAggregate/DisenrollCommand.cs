@@ -36,14 +36,15 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.Disenrollm
                 if (student == null)
                     return Result.Failure($"No student found for Id {command.Id}");
 
-                if (string.IsNullOrWhiteSpace(command.Comment))
-                    return Result.Failure("Disenrollemnt comment is required");
+                var comment = DisenrollmentAggregate.Comment.Create(command.Comment);
+                if (comment.IsFailure)
+                    return Result.Failure(comment.Error);
 
                 Enrollment enrollment = student.GetEnrollment(command.EnrollmentNumber);
                 if (enrollment == null)
                     return Result.Failure($"No enrollment found with number '{command.EnrollmentNumber}'");
 
-                student.RemoveEnrollment(enrollment, command.Comment);
+                student.RemoveEnrollment(enrollment, comment.Value);
 
                 unitOfWork.Commit();
 
