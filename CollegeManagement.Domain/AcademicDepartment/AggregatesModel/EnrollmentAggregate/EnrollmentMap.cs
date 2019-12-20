@@ -1,7 +1,4 @@
 ﻿using FluentNHibernate.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.EnrollmentAggregate
 {
@@ -11,6 +8,9 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.Enrollment
         {
             Id(x => x.Id);
 
+            References(x => x.Grade);
+            References(x => x.Student);
+            References(x => x.Course);
         }
     }
 }

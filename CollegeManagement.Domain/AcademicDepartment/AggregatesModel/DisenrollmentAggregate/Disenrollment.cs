@@ -11,13 +11,13 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.Disenrollm
         public virtual Student Student { get; protected set; }
         public virtual Course Course { get; protected set; }
         public virtual DateTime DateTime { get; protected set; }
-        public virtual string Comment { get; protected set; }
+        public virtual Comment Comment { get; protected set; }
 
         protected Disenrollment()
         {
         }
 
-        public Disenrollment(Student student, Course course, string comment)
+        public Disenrollment(Student student, Course course, Comment comment)
             : this()
         {
             Student = student;
