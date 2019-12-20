@@ -13,7 +13,6 @@ namespace CollegeManagement.Domain.AcademicDepartment.AggregatesModel.StudentAgg
 
             HasMany(x => x.Enrollments).Access.CamelCaseField(Prefix.Underscore).Inverse().Cascade.AllDeleteOrphan();
             HasMany(x => x.Disenrollments).Access.CamelCaseField(Prefix.Underscore).Inverse().Cascade.AllDeleteOrphan();
-
         }
     }
 }
